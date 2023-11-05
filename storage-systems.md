@@ -21,3 +21,19 @@ docker run -it -v $(pwd):/src my-container
 ```
 
 This command would mount the current working directory on the host machine into the `/src` directory in the container. Once the container is running, you can access the source code in the `/src` directory in the container as if it were stored on the host machine.
+
+## Extracting/Inserting in container
+
+To insert or extract files or directories from a Docker container, you can use the `docker cp` command. This command allows you to copy files or directories between a container and the host system.
+
+**Inserting Syntax:**
+
+```sh
+docker cp file-or-directory-host container:file-or-directory-name-container
+```
+
+**Extracting Syntax:**
+
+```sh
+docker cp container:path-or-file-container path-or-file-name-host
+```
